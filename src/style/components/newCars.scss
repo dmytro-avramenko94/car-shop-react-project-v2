@@ -1,0 +1,18 @@
+.new-cars {
+    margin-bottom: 100px;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    &__btn-show-all {
+        align-self: center;
+        border-radius: 8px;
+        padding: 16px 20px;
+        border: none;
+        background-color: var(--332e69);
+        cursor: pointer;
+    }
+}

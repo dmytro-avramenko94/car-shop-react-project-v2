@@ -1,0 +1,104 @@
+.find-your-car {
+    &__container {
+        display: flex;
+        gap: 50px;
+    }
+}
+
+.filters {
+    max-width: 240px;
+    max-height: 780px;
+    padding: 10px 20px;
+    border: 1px solid var(--332e69);
+    border-radius: 15px;
+    margin: 50px 0 100px;
+    background-color: var(--ced8dd);
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__title {
+        max-height: 70px;
+        padding: 23px 16px;
+    }
+
+    &__filter {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 20px;
+        border: 1px solid var(--332e69);
+        border-radius: 15px;
+        background-color: var(--f8f7fd);
+    }
+
+    &__filter-header {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 150px;
+    }
+
+    &__show-button {
+        padding: 10px;
+        border-radius: 10px;
+        background-color: var(--babaa1);
+        cursor: pointer;
+    }
+
+    &__fuel-checkbox-wrap {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+}
+
+.our-cars {
+    margin: 50px 0 100px;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        max-width: 1190px;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+
+}
+
+.our-cars {
+
+    &__sort-wrap {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 10px;
+        border: 1px solid var(--332e69);
+        border-radius: 15px;
+    }
+
+    &__sort-select {
+        border: none;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(4, 283px);
+        gap: 20px;
+    }
+}

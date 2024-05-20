@@ -1,0 +1,25 @@
+.advantages {
+
+    margin-bottom: 100px;
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    &__title {
+        margin-bottom: 25px;
+    }
+
+    &__item {
+        border-bottom: 1px solid var(--ced8dd);
+        padding-bottom: 60px;
+    }
+
+    &__item-title-wrap {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+}

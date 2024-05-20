@@ -1,0 +1,33 @@
+.footer {
+    margin-bottom: 100px;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    &__contacts {
+        display: grid;
+        grid-template-columns: repeat(3, 430px);
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__contact-item {
+        background-color: var(--f8fbfe);
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        padding: 20px;
+        cursor: pointer;
+    }
+
+    &__contact-item-info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}

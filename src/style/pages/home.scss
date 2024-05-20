@@ -1,0 +1,186 @@
+.hero {
+    background-image: url(../../../public/images/home-hero/hero-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 70px;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 150px;
+        padding-top: 30px;
+    }
+
+    &__main-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 655px;
+        margin-left: 160px;
+    }
+
+    &__title {
+        margin-bottom: 40px;
+    }
+
+    &__search-wrap {
+        display: flex;
+        align-items: center;
+        border-radius: 7px;
+        background-color: var(--white-color);
+        padding: 15px 15px;
+        margin-bottom: 8px;
+        max-width: 655px;
+
+    }
+
+    &__search-inp {
+        width: 605px;
+        border: none;
+    }
+
+    &__search-icon {
+        cursor: pointer;
+    }
+
+    &__input-sub-text {
+        margin-bottom: 8px;
+    }
+
+    &__show-all-btn {
+        max-width: 655px;
+        width: 100%;
+        border-radius: 8px;
+        padding: 17px;
+        cursor: pointer;
+        background-color: var(--e83657);
+    }
+
+    &__advantages {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background: rgba(16, 4, 28, 0.55);
+    }
+
+    &__advantages-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 28px 0;
+    }
+
+    &__advantages-description {
+        max-width: 270px;
+    }
+}
+
+.partners {
+    margin-bottom: 100px;
+
+    &__title {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    &__icons-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+
+.car-finance {
+
+    background-color: var(--100b34);
+    margin-bottom: 100px;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+        padding: 80px 0;
+    }
+
+    &__main-content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__information {
+        max-width: 660px;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &__description {
+        margin-bottom: 50px;
+    }
+
+    &__page-link {
+        text-decoration: none;
+        border-radius: 8px;
+        padding: 22px 47px;
+        box-shadow: inset 0 0 0 1px var(--ebf2f5);
+        background: var(--white-color);
+    }
+
+    &__img {
+        border-radius: 15px;
+    }
+
+    &__benefits {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__benefits-item {
+        display: flex;
+        align-items: start;
+        gap: 20px;
+    }
+
+    &__benefits-item-description {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        max-width: 370px;
+    }
+}
+
+.next-car {
+
+    margin-bottom: 100px;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 50px;
+        background-image: url('../../../public/images/home-next-car/back.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100%;
+    }
+
+    &__main-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    &__btn-show-all {
+        border-radius: 8px;
+        padding: 22px 29px;
+        box-shadow: inset 0 0 0 1px var(--ebf2f5);
+        background: var(--white-color);
+        border: none;
+        color: var(--150d2ce0);
+        align-self: center;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,208 @@
+:root {
+    --font-family: "Inter", sans-serif;
+    --second-family: "Roboto", sans-serif;
+}
+
+.nav-link-font {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--332e69);
+}
+
+.hero-title-font {
+    font-weight: 900;
+    font-size: 65px;
+    line-height: 1.31429;
+    color: var(--f8f7fd);
+}
+
+.hero-inp-sub-text {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.33333;
+    color: var(--white-color);
+}
+
+.hero-btn-text {
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 1.33333;
+    color: var(--white-color);
+}
+
+.hero-advantages-text {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.55556;
+    color: var(--f8f7fd);
+}
+
+.card-title-font {
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(21, 13, 44, 0.88);
+    text-transform: uppercase;
+}
+
+.card-description-font {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.33333;
+    color: rgba(21, 13, 44, 0.7);
+}
+
+.show-all-btn-font {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--white-color);
+}
+
+.home-section-title-font {
+    font-weight: 800;
+    font-size: 29px;
+    line-height: 1.37931;
+    color: var(--150d2ce0);
+}
+
+.advantages-title-font {
+    font-weight: 800;
+    font-size: 41px;
+    line-height: 1.17073;
+    color: var(--150d2ce0);
+}
+
+.advantages-sub-title-font {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.33333;
+    color: var(--150d2ce0);
+}
+
+.advantages-item-title-font {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.33333;
+    color: var(--150d2ce0);
+}
+
+.advantages-item-text-font {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.55556;
+    color: var(--150d2ce0);
+}
+
+.new-cars-title-font {
+    font-weight: 800;
+    font-size: 29px;
+    line-height: 1.37931;
+    color: var(--150d2ce0);
+}
+
+.car-finance-title {
+    font-weight: 700;
+    font-size: 67px;
+    line-height: 1.19403;
+    color: var(--white-color);
+}
+
+.car-finance-descrition {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.33333;
+    color: var(--white-color);
+}
+
+.home-car-finance-link-font {
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 1.33333;
+    color: var(--150d2ce0);
+}
+
+.car-finance__benefits-item-title {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 1.28;
+    color: var(--white-color)
+}
+
+.car-finance__benefits-item-text {
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 1.47368;
+    color: var(--white-color)
+}
+
+.next-car__title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.2;
+    text-align: center;
+    color: var(--white-color);
+}
+
+.footer__title {
+    font-weight: 800;
+    font-size: 41px;
+    line-height: 1.17073;
+    text-align: center;
+    color: var(--150d2cb3);
+}
+
+.footer__working-time {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    color: var(--150d2cb3);
+}
+
+.footer__contact-item-title {
+    font-weight: 800;
+    font-size: 19px;
+    line-height: 1.47368;
+    color: var(--150d2ce0);
+}
+
+.footer__contact-item-data {
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 1.6;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: var(--332e69);
+}
+
+.our-cars__title {
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 1.42857;
+    color: var(--150d2ce0);
+}
+
+.our-cars__description,
+.our-cars__sort-select {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--150d2ce0);
+}
+
+.our-cars__title {
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 1.42857;
+    color: var(--150d2ce0);
+}
+
+.our-cars__description,
+.our-cars__sort-select {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--150d2ce0);
+}
