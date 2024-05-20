@@ -8,7 +8,8 @@ import { useLocalStorage } from '../../hooks/useLocalStorage';
 
 
 export default function UniqueBodyTabs() {
-    const [favorite, setFavorite] = useLocalStorage([], 'favorite');
+    const [favoriteCarIdList, setFavoriteCarIdList] = useLocalStorage([], 'favorite');
+
     const uniqueBody = [...new Set(Cars.map(car => car.body))];
 
     const [activeTab, setActiveTab] = useState(uniqueBody.length > 0 ? uniqueBody[0] : '');
@@ -20,10 +21,13 @@ export default function UniqueBodyTabs() {
     const filteredCars = Cars.filter((car) => isCarBodyActive(car))
 
     const addToFavorite = (id) => {
-        const newCar = Cars.find(car => car.id === id);
-        if (newCar && !favorite.some(car => car.id === id)) {
-            setFavorite([...favorite, newCar]);
-        }
+        setFavoriteCarIdList(favoriteCarIds => {
+            const isFavorite = favoriteCarIds.includes(id);
+
+            return (
+                isFavorite ? favoriteCarIds.filter(carId => carId !== id) : [...favoriteCarIds, id]
+            )
+        });
     };
 
     return (

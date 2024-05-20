@@ -1,8 +1,23 @@
+import { useLocalStorage } from '../../hooks/useLocalStorage';
+
 export default function Card({ car, addToFavorite }) {
+
+    const [favoriteCarIdList, setFavoriteCarIdList] = useLocalStorage([], 'favorite');
+
+
     const handleAddToFavorite = () => {
         if (addToFavorite) {
             addToFavorite(car.id);
+            setFavoriteCarIdList(favoriteCarIds => {
+                const isAdded = favoriteCarIds.includes(car.id);
+                return isAdded ? favoriteCarIds.filter(carId => carId !== car.id) : [...favoriteCarIds, car.id];
+            });
         }
+    };
+
+    const addedToFavorite = () => {
+        const isAdded = favoriteCarIdList.includes(car.id);
+        return isAdded ? "./images/cars/favorite-filled.svg" : "./images/cars/favorite.svg";
     };
 
     return (
@@ -23,7 +38,7 @@ export default function Card({ car, addToFavorite }) {
                     </p>
                 </div>
                 <img
-                    src="./images/cars/favorite.svg"
+                    src={addedToFavorite()}
                     alt="Add to favorite"
                     className="card__add-to-favorite"
                     onClick={handleAddToFavorite}

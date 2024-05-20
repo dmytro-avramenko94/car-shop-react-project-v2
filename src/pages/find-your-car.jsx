@@ -5,7 +5,7 @@ import Card from "../components/Card/Card";
 import { useLocalStorage } from '../hooks/useLocalStorage';
 
 export default function FindYourCar() {
-    const [favorite, setFavorite] = useLocalStorage([], 'favorite');
+    const [favoriteCarIdList, setFavoriteCarIdList] = useLocalStorage([], 'favorite');
 
     const [searchParams, setSearchParams] = useSearchParams()
 
@@ -52,10 +52,13 @@ export default function FindYourCar() {
     }, [selectedSorting, filteredCarsArray]);
 
     const addToFavorite = (id) => {
-        const newCar = Cars.find(car => car.id === id);
-        if (newCar && !favorite.some(car => car.id === id)) {
-            setFavorite([...favorite, newCar]);
-        }
+        setFavoriteCarIdList(favoriteCarIds => {
+            const isFavorite = favoriteCarIds.includes(id);
+
+            return (
+                isFavorite ? favoriteCarIds.filter(carId => carId !== id) : [...favoriteCarIds, id]
+            )
+        });
     };
 
 

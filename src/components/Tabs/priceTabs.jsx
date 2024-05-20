@@ -8,7 +8,8 @@ import { useLocalStorage } from '../../hooks/useLocalStorage';
 
 export default function UniquePriceTabs() {
 
-    const [favorite, setFavorite] = useLocalStorage([], 'favorite');
+    const [favoriteCarIdList, setFavoriteCarIdList] = useLocalStorage([], 'favorite');
+
 
     const uniquePrices = [
         {
@@ -36,12 +37,14 @@ export default function UniquePriceTabs() {
     const [activePriceTab, setActivePriceTab] = useState(uniquePrices[0]);
 
     const filteredByPriceCars = Cars.filter(car => car.price >= activePriceTab.valueFrom && car.price < activePriceTab.valueTo);
-
     const addToFavorite = (id) => {
-        const newCar = Cars.find(car => car.id === id);
-        if (newCar && !favorite.some(car => car.id === id)) {
-            setFavorite([...favorite, newCar]);
-        }
+        setFavoriteCarIdList(favoriteCarIds => {
+            const isFavorite = favoriteCarIds.includes(id);
+
+            return (
+                isFavorite ? favoriteCarIds.filter(carId => carId !== id) : [...favoriteCarIds, id]
+            )
+        });
     };
 
     return (

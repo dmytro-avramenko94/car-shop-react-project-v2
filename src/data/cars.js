@@ -494,3 +494,5 @@ export const Cars = [
         id: 38,
     },
 ]
+
+export const CarsSet = new Set([...Cars])
