@@ -54,6 +54,8 @@
         padding: 17px;
         cursor: pointer;
         background-color: var(--e83657);
+        text-align: center;
+        text-decoration: none;
     }
 
     &__advantages {
@@ -182,5 +184,7 @@
         color: var(--150d2ce0);
         align-self: center;
         cursor: pointer;
+        text-align: center;
+        text-decoration: none;
     }
 }

@@ -20,7 +20,7 @@ export default function Home() {
                             <img src="./images/home-hero/search-icon.svg" alt="search-icon" className="hero__search-icon" />
                         </div>
                         <p className="hero__input-sub-text hero-inp-sub-text">or</p>
-                        <button className="hero__show-all-btn hero-btn-text">Browse all ({Cars.length}) cars</button>
+                        <Link to="/find-your-car" className="hero__show-all-btn hero-btn-text">Browse all ({Cars.length}) cars</Link>
                     </div>
                     <div className="hero__advantages">
                         <div className="hero__advantages-item">
@@ -138,7 +138,7 @@ export default function Home() {
                     <img src="./images/home-next-car/cars.png" alt="" className="next-car__img" />
                     <div className="next-car__main-info">
                         <h2 className="next-car__title">Which one's your next car?</h2>
-                        <button className="next-car__btn-show-all show-all-btn-font">View all ({Cars.length}) cars</button>
+                        <Link to="/find-your-car" className="next-car__btn-show-all show-all-btn-font">View all ({Cars.length}) cars</Link>
                     </div>
                 </div>
             </section>

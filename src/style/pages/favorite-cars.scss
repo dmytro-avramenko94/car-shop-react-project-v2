@@ -1,0 +1,16 @@
+.favorite-cars {
+
+    margin: 60px 0 80px;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 20px;
+    }
+}

@@ -1,5 +1,6 @@
 
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Link } from 'react-router-dom';
 import Card from '../Card/Card';
 import { Cars } from '../../data/cars';
 import 'swiper/css';
@@ -20,7 +21,7 @@ export default function NewCars() {
                     ))}
                 </Swiper>
             </div>
-            <button className="new-cars__btn-show-all show-all-btn-font">View all ({Cars.length}) cars</button>
+            <Link to="/find-your-car" className="new-cars__btn-show-all show-all-btn-font">View all ({Cars.length}) cars</Link>
         </>
     )
 }

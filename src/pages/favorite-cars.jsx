@@ -16,13 +16,17 @@ export default function FavoriteCars() {
     };
 
     return (
-        <>
-            <h1>Favorite Cars</h1>
-            <div className="favorite-cars-container">
-                {favoriteCarIdList.map(id => (
-                    <Card key={id} car={Cars.find(car => car.id === id)} addToFavorite={addToFavorite} />
-                ))}
+        <section className="favorite-cars">
+            <div className="favorite-cars__container container">
+                <h1 className="favorite-cars__title">Your Favorite Cars</h1>
+                <p className="favorite-cars__sub-title">✔️ Choose your favorite car and we will make the best service for you ✔️ </p>
+                <div className="favorite-cars__content">
+                    {favoriteCarIdList.map(id => (
+                        <Card key={id} car={Cars.find(car => car.id === id)} addToFavorite={addToFavorite} />
+                    ))}
+                </div>
             </div>
-        </>
+
+        </section>
     );
 }
