@@ -8,6 +8,7 @@ import { Cars } from '../data/cars';
 export default function Home() {
 
 
+
     return (
         <>
             <section className="hero">
@@ -15,10 +16,12 @@ export default function Home() {
                     <div className="hero__main-info">
                         <h1 className="hero__title hero-title-font">Find the car that's
                             searching for you.</h1>
-                        <div className="hero__search-wrap">
-                            <input type="text" className="hero__search-inp" placeholder="Search makes, models, body..." />
+                        <form className="hero__search-wrap">
+                            <input type="text"
+                                className="hero__search-inp"
+                                placeholder="Search makes, models, body..." />
                             <img src="./images/home-hero/search-icon.svg" alt="search-icon" className="hero__search-icon" />
-                        </div>
+                        </form>
                         <p className="hero__input-sub-text hero-inp-sub-text">or</p>
                         <Link to="/find-your-car" className="hero__show-all-btn hero-btn-text">Browse all ({Cars.length}) cars</Link>
                     </div>

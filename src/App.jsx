@@ -7,8 +7,6 @@ import FindYourCar from "./pages/find-your-car"
 import SellOrTradeIn from "./pages/sell-or-trade-in"
 import HowItWorks from "./pages/how-it-works"
 import CarFinance from "./pages/car-finance"
-import { useLocalStorage } from "./hooks/useLocalStorage";
-import { Cars } from "./data/cars";
 import FavoriteCars from "./pages/favorite-cars";
 
 

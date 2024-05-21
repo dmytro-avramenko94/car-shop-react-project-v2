@@ -1,21 +1,40 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
+import { useState } from "react";
 
 export default function Header() {
+
+    const [searchInputValue, setSearchInputValue] = useState('')
+
+    const catchSearchInputValue = (event) => {
+        setSearchInputValue(event.target.value)
+    }
+
     return (
         <header className="header">
             <div className="header__container container">
-                <NavLink to='/'>
-                    <img src="./images/header/carma-icon.svg" alt="" className="header__icon" />
-                </NavLink>
-                <div className="header__search-wrap">
-                    <input type="text" className="header__search" placeholder="Search makes, models..." />
-                    <img src="./images/header/search-btn.svg" alt="" className="header__search-icon" />
-                </div>
+
+                <img src="./images/header/carma-icon.svg" alt="" className="header__icon" />
+
+                <form className="header__search-wrap">
+                    <input
+                        type="text"
+                        className="header__search"
+                        placeholder="Search makes, models..."
+                        value={searchInputValue}
+                        onChange={catchSearchInputValue} />
+
+                    <Link to={`/find-your-car?searchInputValue=${searchInputValue}`} >
+                        <img src="./images/header/search-btn.svg" alt="" className="header__search-icon" />
+                    </Link>
+
+
+                </form>
                 <nav className="header__nav">
+                    <NavLink to='/' className='header__nav-link nav-link-font'>Home</NavLink>
                     <NavLink to='/find-your-car' className='header__nav-link nav-link-font'>Find your car</NavLink>
-                    <NavLink to='/sell-or-trade-in' className='header__nav-link nav-link-font'>Sell or trade in</NavLink>
+                    {/* <NavLink to='/sell-or-trade-in' className='header__nav-link nav-link-font'>Sell or trade in</NavLink>
                     <NavLink to='/how-it-works' className='header__nav-link nav-link-font'>How it works</NavLink>
-                    <NavLink to='/car-finance' className='header__nav-link nav-link-font'>Car finance</NavLink>
+                    <NavLink to='/car-finance' className='header__nav-link nav-link-font'>Car finance</NavLink> */}
                 </nav>
                 <div className="header__menu">
                     <NavLink to='/favorite-cars'>

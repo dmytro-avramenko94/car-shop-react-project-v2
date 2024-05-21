@@ -27,6 +27,9 @@ export default function FindYourCar() {
     const [filteredCarsArray, setFilteredCarsArray] = useState(Cars)
     const [sortedCarsArray, setSortedCarsArray] = useState(filteredCarsArray);
 
+    // const [inputValue, setInputValue] = useState('');
+
+
     useEffect(() => {
         const bodyFromParams = searchParams.get("bodyType") ?? "view-all";
         setSelectedBody(bodyFromParams);
@@ -38,9 +41,13 @@ export default function FindYourCar() {
         setToPriceValue(parseInt(toPriceFromParams))
 
 
+        // const searchInputValueFromParams = searchParams.get("searchInputValue") ?? ""
+        // setInputValue(searchInputValueFromParams)
+
         const filtered = Cars
             .filter(car => (bodyFromParams === 'view-all' || car.body == bodyFromParams))
             .filter(car => (car.price >= fromPriceFromParams && car.price < toPriceFromParams))
+        // .filter(car => (car.brand.toLocaleLowerCase().includes(inputValue.toLocaleLowerCase())))
 
 
         setFilteredCarsArray(filtered);
@@ -232,7 +239,7 @@ export default function FindYourCar() {
                 <section className="our-cars">
                     <div className="our-cars__container">
                         <div className="our-cars__header">
-                            <h2 className="our-cars__title">Our cars ({Cars.length} results)</h2>
+                            <h2 className="our-cars__title">Our cars ({filteredCarsArray.length} results)</h2>
                             <div className="our-cars__sort-wrap">
                                 <p className="our-cars__sort-text">Sort by: </p>
                                 <select className="our-cars__sort-select" onChange={catchSortingMethod}>
